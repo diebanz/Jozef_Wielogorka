@@ -4,6 +4,7 @@ header {
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(4, 1fr);
 	justify-items: center;
+
 }
 
 .hero {
@@ -11,13 +12,15 @@ header {
 	grid-column: 1 / 3;
 	grid-row: 1 / 5;
 	width: 100%;
+	height: 100vh;
 	background-image: linear-gradient(
-			75deg,
-			rgba($color-primary-light, 0.9) 0% 30%,
-			#ffffff94 30%
-		),
-		url(../../img/hero.jpg);
-	background-position: right;
+			to bottom,
+			rgba($color-primary-light, .2) 0% 30%, 
+			rgba($color-white, .5) 45% 75%,
+			rgba($color-white, 0.95) 85%
+			),
+		url(../../img/hero2.jpg);
+	background-position: left;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -29,8 +32,8 @@ nav {
 	width: 50%;
 	height: 40%;
 	margin-top: 3rem;
-	clip-path: polygon(5% 0%, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
-	background-color: $color-white;
+	clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+	background-color: rgba($color-primary, .5);
 }
 
 .navi {
@@ -43,6 +46,7 @@ nav {
 }
 
 .navi__items {
+
 	&:not(:last-child) {
 		content: " ";
 		border-right: 1px solid $color-grey-dark-2;
@@ -58,9 +62,14 @@ nav {
 	border-top: 3px solid transparent;
 
 	&:hover {
-		border-top: 3px solid $color-secondary-dark;
-		color: $color-black;
-		clip-path: polygon(0 0, 100% 0%, 100% 60%, 50% 100%, 0 60%);
-		background-color: $color-primary-light;
+		color: $color-primary-dark;
+		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+		background-color: $color-white;
 	}
+}
+
+.header__content {
+	display: grid;
+	grid-column: 1 / 3;
+	grid-row: 4;
 }

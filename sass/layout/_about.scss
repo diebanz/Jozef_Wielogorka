@@ -1,0 +1,12 @@
+.about {
+    padding: 2rem;
+    height: 100vh;
+}
+
+.about__shape {
+    margin-bottom: .5rem;
+    width: 18%;
+    height: 33%;
+    clip-path: polygon(25% 0, 75% 0, 100% 30%, 100% 70%, 75% 100%, 25% 100%, 0% 70%, 0% 30%);
+    background-color: $color-primary-light;
+}

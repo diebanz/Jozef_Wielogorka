@@ -9,10 +9,33 @@
 body {
   box-sizing: border-box;
   color: #333;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none; }
+
+.heading {
+  text-transform: uppercase;
+  text-align: center; }
+  .heading__1 {
+    font-family: "Spartan";
+    font-size: 7rem; }
+  .heading__2 {
+    font-size: 4.5rem; }
+
+.header__content--text {
+  font-size: 3rem; }
+
+.header__span--1 {
+  color: #9e9d24; }
+
+.header__span--2 {
+  color: #b69b06; }
+
+.header__span--3 {
+  color: #fff;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; }
 
 header {
   height: 100vh;
@@ -26,8 +49,9 @@ header {
   grid-column: 1 / 3;
   grid-row: 1 / 5;
   width: 100%;
-  background-image: linear-gradient(75deg, rgba(245, 245, 146, 0.9) 0% 30%, #ffffff94 30%), url(../../img/hero.jpg);
-  background-position: right;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(245, 245, 146, 0.2) 0% 30%, rgba(255, 255, 255, 0.5) 45% 75%, rgba(255, 255, 255, 0.95) 85%), url(../../img/hero2.jpg);
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -38,8 +62,8 @@ nav {
   width: 50%;
   height: 40%;
   margin-top: 3rem;
-  clip-path: polygon(5% 0%, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
-  background-color: #fff; }
+  clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+  background-color: rgba(250, 209, 28, 0.5); }
 
 .navi {
   display: flex;
@@ -60,7 +84,22 @@ nav {
   text-transform: uppercase;
   border-top: 3px solid transparent; }
   .navi__items--links:hover {
-    border-top: 3px solid #6c6f00;
-    color: #000;
-    clip-path: polygon(0 0, 100% 0%, 100% 60%, 50% 100%, 0 60%);
-    background-color: #f5f592; }
+    color: #b69b06;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-color: #fff; }
+
+.header__content {
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: 4; }
+
+.about {
+  padding: 2rem;
+  height: 100vh; }
+
+.about__shape {
+  margin-bottom: .5rem;
+  width: 18%;
+  height: 33%;
+  clip-path: polygon(25% 0, 75% 0, 100% 30%, 100% 70%, 75% 100%, 25% 100%, 0% 70%, 0% 30%);
+  background-color: #f5f592; }
