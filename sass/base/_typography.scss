@@ -4,7 +4,7 @@
 
     &__1 {
         font-family: "Spartan";
-        font-size: 7rem;    
+        font-size: 7rem;
     }
 
     &__2 {
@@ -12,23 +12,13 @@
     }
 }
 
-
 // HEADER
 
 .header__content--text {
     font-size: 3rem;
 }
 
-.header__span--1 {
-    color: $color-secondary;
-}
-
-.header__span--2 {
-    color: $color-primary-dark;
-}
-
-.header__span--3 {
+.header__span {
     color: $color-white;
-    text-shadow: -1px 0 $color-black, 0 1px $color-black,
-      1px 0 $color-black, 0 -1px $color-black;
+    text-shadow: 0.3rem 0.3rem 0.3rem $color-primary-dark;
 }
