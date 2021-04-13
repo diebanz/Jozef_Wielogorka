@@ -4,8 +4,9 @@
     box-sizing: inherit;
 }
 
-:root {
+html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -17,4 +18,17 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.container {
+    width: 183rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        [full-start] minmax(10rem, 1fr) [center-start]repeat(
+            11,
+            [col-start] minmax(min-content, 20rem) [col-end]
+        )
+        [center-end] minmax(10rem, 1fr) [full-end];
+    grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr));
 }

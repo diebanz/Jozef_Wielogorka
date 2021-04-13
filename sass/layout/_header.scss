@@ -30,13 +30,15 @@ nav {
     grid-column: 1 / 3;
     grid-row: 1;
     width: 100%;
-    height: 10rem;
-    background-color: rgba($color-gray-dark, 0.3);
+    height: 9rem;
+    background-color: rgba($color-gray-dark, 0.5);
     backdrop-filter: blur(1rem);
     -moz-backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    border-bottom: 1px solid $color-primary-dark;
     position: fixed;
     top: 0;
+    z-index: 10;
 }
 
 .navi {
@@ -49,17 +51,27 @@ nav {
 }
 
 .navi__items {
-    &:not(:last-child) {
-        border-right: 1px solid $color-gray-dark-2;
+    &:after {
+        content: " | ";
+        color: $color-primary-dark;
+        margin: 0 1rem;
+    }
+
+    &:first-child:before {
+        content: " | ";
+        color: $color-primary-dark;
+        margin: 0 1rem;
     }
 }
 
 .navi__items--links {
-    color: $color-primary-dark;
+    color: $color-gray-dark-1;
     font-size: 2rem;
     padding: 2.5rem 3.5rem;
     text-transform: uppercase;
-    border-top: 3px solid transparent;
+    background-color: rgba($color-gray-light, 0.7);
+    border-radius: 1rem;
+    transform: all 0.5s;
 
     &:hover {
         clip-path: polygon(
@@ -70,7 +82,8 @@ nav {
             25% 100%,
             0% 50%
         );
-        background-color: $color-white;
+        background-color: $color-primary;
+        color: $color-gray-dark-2;
     }
 }
 
@@ -79,6 +92,8 @@ nav {
     height: 100%;
     padding: 2rem;
     background-color: rgba(#bbbbbb, 0.6);
+    border-top: 1px solid $color-gray-dark;
+    border-bottom: 1px solid $color-gray-dark;
     backdrop-filter: blur(1rem);
     -moz-backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
