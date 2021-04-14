@@ -30,5 +30,5 @@ a {
             [col-start] minmax(min-content, 20rem) [col-end]
         )
         [center-end] minmax(10rem, 1fr) [full-end];
-    grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(max-content, 1fr));
 }

@@ -21,7 +21,7 @@ a {
   margin: 0 auto;
   display: grid;
   grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(11, [col-start] minmax(min-content, 20rem) [col-end]) [center-end] minmax(10rem, 1fr) [full-end];
-  grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr)); }
+  grid-template-rows: repeat(auto-fit, minmax(max-content, 1fr)); }
 
 .heading {
   text-transform: uppercase;
@@ -42,8 +42,8 @@ a {
   text-shadow: 0.3rem 0.3rem 0.3rem #666; }
 
 .header__span--1 {
-  color: rgba(245, 245, 146, 0.7);
-  text-shadow: 0.3rem 0.3rem 0.3rem #af9606; }
+  color: rgba(238, 195, 6, 0.7);
+  text-shadow: 0.3rem 0.3rem 0.3rem #a18901; }
 
 header {
   height: 100vh;
@@ -74,10 +74,7 @@ nav {
   backdrop-filter: blur(1rem);
   -moz-backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
-  border-bottom: 1px solid #af9606;
-  position: fixed;
-  top: 0;
-  z-index: 10; }
+  border-bottom: 1px solid #a18901; }
 
 .navi {
   display: flex;
@@ -89,12 +86,12 @@ nav {
 
 .navi__items:after {
   content: " | ";
-  color: #af9606;
+  color: #a18901;
   margin: 0 1rem; }
 
 .navi__items:first-child:before {
   content: " | ";
-  color: #af9606;
+  color: #a18901;
   margin: 0 1rem; }
 
 .navi__items--links {
@@ -107,7 +104,7 @@ nav {
   transform: all 0.5s; }
   .navi__items--links:hover {
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    background-color: #ffda34;
+    background-color: #eec306;
     color: #333; }
 
 .header__content {
@@ -130,65 +127,62 @@ nav {
   height: 100vh;
   margin: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-column-gap: 1rem; }
   .about__title {
-    width: 95%;
-    height: 6rem;
-    color: #ffda34;
-    margin: 2rem;
-    border-bottom: 1px solid #ffda34; }
+    display: grid;
+    grid-column: 1 / 4;
+    width: 99%;
+    height: 10rem;
+    margin: 7rem auto;
+    padding: 3rem;
+    border-top: 1px solid #eec306;
+    box-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.2); }
 
 .about__design {
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
-  background-color: rgba(245, 245, 146, 0.4); }
+  grid-column: 1;
+  position: relative; }
 
 .about__item {
-  width: 35rem;
-  height: 35rem;
+  width: 25rem;
+  height: 25rem;
+  transform: rotate(90deg);
   box-shadow: 0.5rem 0 0.3rem rgba(0, 0, 0, 0.3);
-  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   display: grid; }
-  .about__item--title {
-    color: #666;
-    font-size: 5rem;
-    padding: 15rem 0;
-    text-align: center; }
   .about__item--1 {
-    background-color: #ccc;
-    grid-row: 3;
-    transform: rotate(-72deg);
-    margin-top: -15rem;
-    margin-left: -4rem; }
+    background-color: rgba(204, 204, 204, 0.6);
+    position: absolute;
+    top: 0rem;
+    left: 9rem;
+    border-bottom: 3px solid #eec306; }
   .about__item--2 {
-    width: 35rem;
-    height: 35rem;
-    margin-left: 14.2rem;
-    margin-top: -6rem;
-    background-color: #ffda34;
-    grid-row: 2;
-    transform: rotate(-40deg); }
-  .about__item--3 {
-    margin-top: 23rem;
-    margin-left: -14rem;
-    background-color: #eee;
-    grid-row: 1;
-    transform: rotate(66deg); }
-  .about__item--4 {
-    margin-top: 21rem;
-    margin-left: 16rem;
-    background-color: #eee;
-    grid-row: 1;
-    transform: rotate(140deg); }
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    background-color: #eec306; }
+  .about__item--5 {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    background-color: #fce770;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    z-index: -1; }
 
 .about__content {
   display: grid;
   grid-column: 2 / 4;
-  box-shadow: 1rem 1rem 3.5rem rgba(0, 0, 0, 0.2);
-  z-index: 1; }
+  position: relative;
+  grid-auto-columns: 40rem;
+  grid-auto-rows: 10rem; }
+
+.about__content--text {
+  font-size: 2rem;
+  display: grid;
+  grid-row: 3;
+  grid-column: 1 / 4; }
 
 .honey {
-  grid-column: full-start / full-end;
-  height: 100vh; }
+  grid-column: full-start / full-end; }
