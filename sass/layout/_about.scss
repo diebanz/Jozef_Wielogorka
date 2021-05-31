@@ -1,112 +1,72 @@
 .about {
-    height: 95vh;
-    width: 90%;
-    margin: 2rem auto;
-    padding: 3rem 0;
-    border-radius: 1rem;
-    box-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.2);
-    border: 2px solid $color-secondary-light;
-    position: relative;
-}
-
-.about__item {
-    width: 25rem;
-    height: 25rem;
-    transform: rotate(90deg);
-    box-shadow: 0.5rem 0 0.3rem rgba(0, 0, 0, 0.3);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    z-index: -1;
-    position: absolute;
-
-    &--1 {
-        background-color: rgba($color-gray-light-1, 0.4);
-        top: 1rem;
-        left: 1rem;
-    }
-
-    &--2 {
-        top: 1rem;
-        left: 27rem;
-        background-color: rgba($color-primary, 0.4);
-    }
-    &--3 {
-        top: 20.5rem;
-        left: 14rem;
-        background-color: rgba($color-gray-light-1, 0.4);
-    }
-
-    &--4 {
-        top: 20.5rem;
-        left: 40rem;
-        background-color: rgba($color-secondary-light, 0.4);
-    }
-
-    &--5 {
-        top: 40rem;
-        left: 27rem;
-        background-color: rgba($color-gray-light-1, 0.4);
-    }
-    &--6 {
-        top: 40rem;
-        left: 53rem;
-        background-color: rgba($color-primary-light, 0.4);
-    }
-    &--7 {
-        top: 59.5rem;
-        left: 40rem;
-        background-color: rgba($color-gray-light-1, 0.4);
-    }
-    &--8 {
-        top: 59.5rem;
-        left: 66rem;
-        background-color: rgba($color-secondary-light, 0.4);
-    }
-}
-
-// Grid part of about section
-.about__title {
-    width: 100%;
-    height: 10rem;
-    padding: 3rem;
-    margin-top: 2rem;
-    backdrop-filter: blur(0.5rem);
-    -moz-backdrop-filter: blur(0.5rem);
-    -webkit-backdrop-filter: blur(0.5rem);
-    background-color: $color-secondary;
-    box-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.about__content {
-    width: 100%;
-    height: 80rem;
     display: flex;
-    padding: 1rem;
-}
+    justify-content: space-between;
 
-.about__content--text,
-.about__content--pic {
-    width: 49%;
-    margin-top: 8rem;
-}
+    &__left {
+        width: 64%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
-.about__content--text {
-    height: 85%;
-    font-size: 2rem;
-    margin-right: 3rem;
-    border-radius: 3rem;
-    padding: 10rem 3rem;
-    border: 1px solid rgba($color-secondary-light, 0.5);
-    background-color: rgba($color-white, 0.2);
-    backdrop-filter: blur(0.5rem);
-    -moz-backdrop-filter: blur(0.5rem);
-    -webkit-backdrop-filter: blur(0.5rem);
-}
+        margin: 3.8rem 0;
 
-.about__content--pic {
-    height: 85%;
-    background-image: url(../../img/honeyjar3.jpg);
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 3rem;
+        &--heading {
+            margin-right: -15rem;
+        }
+
+        &--line {
+        }
+
+        &--text {
+            text-align: center;
+            text-indent: 10rem;
+            font-size: 1.8rem;
+            padding: 10rem 0 10rem 20rem;
+
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &--button {
+        }
+    }
+
+    &__right {
+        width: 30%;
+        position: relative;
+
+        &--decoration {
+            margin-left: 12rem;
+            width: 45rem;
+            height: 100vh;
+            background-color: $color-secondary;
+            box-shadow: -30px -30px 1px rgba(71, 89, 92, 0.15),
+                -15px -15px 1px rgba(71, 89, 92, 0.15);
+        }
+
+        &--under {
+            width: 49rem;
+            height: 74rem;
+            background-color: $color-secondary-dark;
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top: 14rem;
+            left: -10rem;
+            opacity: 0.3;
+        }
+
+        &--picture {
+            width: 45rem;
+            height: 70rem;
+            background-image: url(./../../img/about.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 16rem;
+            left: -8rem;
+            box-shadow: 4rem 4rem 10rem rgba($color-secondary-dark, 0.4);
+        }
+    }
 }

@@ -1,34 +1,25 @@
 .heading {
-    text-transform: uppercase;
-    font-family: "Spartan", sans-serif;
+    line-height: 1.3;
+    letter-spacing: 5%;
 
     &__1 {
-        font-size: 7rem;
-        text-align: center;
+        font-size: 10rem;
+        font-family: $title-font;
+        color: $color-tertiary-dark;
     }
 
     &__2 {
-        font-size: 5rem;
-        color: $color-white;
-        text-shadow: 0.3rem 0.3rem 0.3rem $color-gray-dark-1;
+        font-size: 8rem;
+        font-family: $title-font;
+        color: $color-tertiary-dark;
     }
-
     &__3 {
-        font-size: 3rem;
+        font-size: 5rem;
+        font-family: $regular-font;
+        color: $color-tertiary-dark;
     }
-}
-
-// HEADER
-
-.header__content--text {
-    font-size: 3rem;
-}
-
-.header__span {
-    color: $color-white;
-    text-shadow: 0.3rem 0.3rem 0.3rem $color-gray-dark-1;
-}
-.header__span--1 {
-    color: $color-primary;
-    text-shadow: 0.4rem 0.4rem 0.4rem $color-gray-dark-1;
+    &__4 {
+        font-size: 3rem;
+        font-family: $regular-font;
+    }
 }

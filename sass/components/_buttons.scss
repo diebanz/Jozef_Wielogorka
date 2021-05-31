@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 0.05rem;
+}
+
+.btn {
+    border-radius: 5rem;
+    padding: 2rem 4rem;
+    color: $color-tertiary-dark;
+}
+
+.btn__transparent {
+    background-color: rgba($color-primary-light, 0.5);
+    box-shadow: -2px -2px 0px #f6c8a2, 2px 2px 2px $color-gray-light-2;
+}

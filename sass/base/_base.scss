@@ -10,10 +10,10 @@ html {
 }
 
 body {
+    font-size: 1.5rem;
     box-sizing: border-box;
     color: $color-gray-dark-2;
-    font-family: "Open Sans", sans-serif;
-    overflow-x: hidden;
+    line-height: 3rem;
 }
 
 a {
