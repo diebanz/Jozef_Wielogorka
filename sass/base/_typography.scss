@@ -3,10 +3,11 @@
     letter-spacing: 5px;
 
     &__1 {
-        line-height: 1.5;
+        line-height: 1.3;
         font-size: 10rem;
         font-family: $title-font;
         color: $color-tertiary-dark;
+        margin-top: 5rem;
     }
 
     &__2 {

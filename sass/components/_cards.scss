@@ -1,0 +1,13 @@
+.card {
+    width: 45rem;
+    height: 62.5rem;
+    background: linear-gradient(
+        333.96deg,
+        #c07304 2.87%,
+        #ea9010 50.37%,
+        #f6c8a2 98.88%
+    );
+    box-shadow: 30px 30px 1px rgba(153, 93, 11, 0.15),
+        -30px -30px 1px rgba(246, 200, 162, 0.3);
+    backdrop-filter: blur(4px);
+}

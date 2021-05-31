@@ -1,9 +1,10 @@
 .about {
+    margin-bottom: 10rem;
     display: flex;
     justify-content: space-between;
 
     &__left {
-        width: 64%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -36,11 +37,12 @@
     }
 
     &__right {
-        width: 30%;
+        width: 40%;
         position: relative;
+        display: flex;
+        justify-content: flex-end;
 
         &--decoration {
-            margin-left: 12rem;
             width: 45rem;
             height: 90vh;
             background-color: $color-secondary;
@@ -55,7 +57,7 @@
             backdrop-filter: blur(10px);
             position: absolute;
             top: 14rem;
-            left: -10rem;
+            left: 10rem;
             opacity: 0.3;
         }
 
@@ -68,7 +70,7 @@
             background-repeat: no-repeat;
             position: absolute;
             top: 16rem;
-            left: -8rem;
+            left: 12rem;
             box-shadow: 4rem 4rem 4rem rgba($color-secondary-dark, 0.4);
         }
     }

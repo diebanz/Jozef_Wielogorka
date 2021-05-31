@@ -1,0 +1,10 @@
+.offer {
+    &__container {
+        padding: 10rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+        gap: 10rem;
+        justify-content: center;
+        align-content: center;
+    }
+}
