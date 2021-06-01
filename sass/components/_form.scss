@@ -1,5 +1,5 @@
 .contact__form {
-    width: 100%;
+    width: 90%;
 
     label {
         margin-bottom: 1rem;
@@ -20,7 +20,7 @@
         border: none;
 
         &:focus {
-            box-shadow: 0.5rem 0.5rem $color-primary;
+            box-shadow: 0.2rem 0.2rem 0.1rem $color-primary;
             outline: none;
         }
 
@@ -33,6 +33,14 @@
         font-size: 1.6rem;
         resize: none;
         height: 20rem;
+    }
+
+    &--buttons {
+        margin-top: 10rem;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 

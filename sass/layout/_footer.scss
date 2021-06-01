@@ -1,0 +1,22 @@
+.footer {
+    padding-top: 5rem;
+    margin-top: 20rem;
+    width: 100%;
+    background-color: $color-secondary-dark;
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        width: 90%;
+        margin-bottom: 2rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__map {
+        width: 50rem;
+        height: 50rem;
+        border: 1px solid red;
+    }
+}

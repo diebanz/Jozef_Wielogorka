@@ -27,7 +27,7 @@ a {
     margin-top: 5rem;
     letter-spacing: 5px; }
   .heading__2 {
-    font-size: 8rem;
+    font-size: 7rem;
     font-family: "Kaushan Script", cursive;
     color: #0f1143;
     letter-spacing: 5px; }
@@ -50,6 +50,11 @@ a {
 a {
   text-decoration: none; }
 
+.green__line {
+  width: 2px;
+  height: 21rem;
+  background-color: #7a9e9f; }
+
 .navi {
   width: 100%;
   position: fixed;
@@ -63,7 +68,7 @@ a {
   backdrop-filter: blur(10px);
   -moz-backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(246, 200, 162, 0.2); }
+  background-color: rgba(246, 200, 162, 0.1); }
   .navi__list {
     list-style: none; }
     .navi__list--link {
@@ -121,9 +126,9 @@ a {
     .header__hero--h1 {
       margin-bottom: 10rem; }
     .header__hero--buttons {
-      width: 65%;
-      display: flex;
-      justify-content: space-between; }
+      width: 65%; }
+      .header__hero--buttons a {
+        margin-right: 4rem; }
   .header__span {
     color: #ea9010;
     letter-spacing: 1.5rem;
@@ -143,7 +148,7 @@ a {
     flex-direction: column;
     align-items: flex-end;
     padding-right: 2rem;
-    margin: 3.8rem 0; }
+    margin: 4.8rem 0; }
     .about__left--heading {
       margin-right: -30rem;
       z-index: 2; }
@@ -239,7 +244,7 @@ a {
       left: 20rem; }
     .contact__hero--box {
       width: 60%;
-      margin-top: 3rem; }
+      margin-top: 4rem; }
     .contact__hero--buttons {
       width: 65%;
       display: flex;
@@ -268,13 +273,31 @@ a {
 .offer__line {
   margin-left: 1rem; }
 
+.footer {
+  padding-top: 5rem;
+  margin-top: 20rem;
+  width: 100%;
+  background-color: #47595c;
+  display: flex;
+  flex-direction: column; }
+  .footer__container {
+    width: 90%;
+    margin-bottom: 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+  .footer__map {
+    width: 50rem;
+    height: 50rem;
+    border: 1px solid red; }
+
 button {
   border: none; }
 
 .btn {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
   border-radius: 5rem;
   padding: 2rem 4rem;
   color: #0f1143;
@@ -349,7 +372,7 @@ button {
     transform: rotateY(0); }
 
 .contact__form {
-  width: 100%; }
+  width: 90%; }
   .contact__form label {
     margin-bottom: 1rem;
     color: #0f1143;
@@ -367,7 +390,7 @@ button {
     border: none; }
     .contact__form input:focus,
     .contact__form textarea:focus {
-      box-shadow: 0.5rem 0.5rem #ea9010;
+      box-shadow: 0.2rem 0.2rem 0.1rem #ea9010;
       outline: none; }
     .contact__form input:invalid,
     .contact__form textarea:invalid {
@@ -376,6 +399,12 @@ button {
     font-size: 1.6rem;
     resize: none;
     height: 20rem; }
+  .contact__form--buttons {
+    margin-top: 10rem;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 .contact__form--name,
 .contact__form--email,

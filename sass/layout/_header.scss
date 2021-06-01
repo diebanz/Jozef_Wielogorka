@@ -72,8 +72,10 @@
         }
         &--buttons {
             width: 65%;
-            display: flex;
-            justify-content: space-between;
+
+            a {
+                margin-right: 4rem;
+            }
         }
     }
 
