@@ -1,0 +1,88 @@
+.contact {
+    margin-bottom: 10rem;
+    width: 100%;
+
+    &__heading {
+        margin-left: -30rem;
+    }
+
+    &__line {
+        margin-left: -15rem;
+    }
+
+    &__hero {
+        display: flex;
+
+        &--decoration {
+            position: relative;
+            width: 40%;
+            height: 90vh;
+        }
+
+        &--colorbar {
+            width: 55%;
+            height: 90vh;
+            background-color: $color-secondary;
+            box-shadow: 30px 30px 1px rgba(71, 89, 92, 0.15),
+                15px 15px 1px rgba(71, 89, 92, 0.15);
+
+            &::before {
+                content: "";
+                width: 56%;
+                height: 65rem;
+                background-color: rgba($color-secondary-light, 0.5);
+                position: absolute;
+                top: 13rem;
+                left: 18rem;
+            }
+        }
+
+        &--under {
+            width: 50%;
+            height: 61rem;
+            background: linear-gradient(
+                152.4deg,
+                #47595c 2.82%,
+                #7a9e9f 47.78%,
+                #cae2e2 97.69%
+            );
+
+            backdrop-filter: blur(4px);
+            -moz-backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            box-shadow: -4rem 4rem 4rem rgba($color-secondary-dark, 0.4);
+            position: absolute;
+            top: 15rem;
+            left: 20rem;
+        }
+
+        &--picture {
+            width: 50%;
+            height: 55rem;
+            background-image: url(./../../img/contact.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 15rem;
+            left: 20rem;
+        }
+
+        &--box {
+            width: 60%;
+            margin-top: 3rem;
+        }
+
+        &--buttons {
+            width: 65%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__span {
+        color: $color-tertiary-dark;
+        font-size: 3rem;
+    }
+}

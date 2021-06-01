@@ -1,4 +1,5 @@
 .offer {
+    margin-bottom: 10rem;
     width: 100%;
 
     &__container {
@@ -12,7 +13,12 @@
     }
 
     &__heading--3 {
-        font-size: 4rem;
+        font-size: 3rem;
         text-align: center;
     }
+}
+
+.offer__heading,
+.offer__line {
+    margin-left: 1rem;
 }
