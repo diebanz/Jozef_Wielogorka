@@ -72,11 +72,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 2rem;
+  padding: 0.5rem 2rem;
   backdrop-filter: blur(10px);
   -moz-backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(246, 200, 162, 0.1); }
+  background-color: rgba(246, 200, 162, 0.1);
+  border-bottom: 1px solid #c47200; }
   .navi__list {
     list-style: none; }
     .navi__list--link {
@@ -159,6 +160,14 @@ a {
       color: #c47200;
       letter-spacing: 0.5rem;
       text-shadow: 2px 2px 1px #0f1143; }
+
+.logo {
+  padding: 1rem;
+  background-color: #8c5202;
+  border-radius: 50%;
+  color: #cae2e2; }
+  .logo:hover {
+    box-shadow: 0.1rem 0.1rem 0.2rem #f6c8a2; }
 
 .about {
   margin-bottom: 10rem;
@@ -278,7 +287,8 @@ a {
 
 .offer {
   margin-bottom: 10rem;
-  width: 100%; }
+  width: 100%;
+  background-color: rgba(246, 200, 162, 0.3); }
   .offer__container {
     width: 90%;
     margin: 0 auto;
@@ -320,7 +330,7 @@ a {
       color: #cae2e2;
       line-height: 1; }
     .footer__info--h4 {
-      color: #7a9e9f;
+      color: #f6c8a2;
       margin: 2rem 0;
       font-size: 2.5rem; }
     .footer__info--link {
@@ -409,10 +419,10 @@ button {
       position: absolute;
       top: 0;
       left: 0;
-      box-shadow: 3rem 3rem 1px #995d0b26, -3rem -3rem 1px #f6c8a24d; }
+      box-shadow: 2rem 2rem 5px #995d0b26, -2rem -2rem 5px #f6c8a24d; }
       .card__side--front-1 {
         background: linear-gradient(153.03deg, #cae2e2 -1.24%, #7a9e9f 47.8%, #47595c 99.99%, #47595c 100%);
-        box-shadow: -3rem -3rem 1px #cae2e24d, 3rem 3rem 1px #47595c4d; }
+        box-shadow: -2rem -2rem 5px #cae2e24d, 2rem 2rem 5px #47595c4d; }
     .card__side--behind {
       transform: rotateY(180deg);
       width: 40rem;
@@ -421,7 +431,7 @@ button {
       top: 0;
       left: 0;
       background: linear-gradient(333.63deg, #24264f, #c7c9e5, #fdfdfd);
-      box-shadow: 30px 30px 1px rgba(36, 38, 79, 0.5), -30px -30px 1px rgba(199, 201, 229, 0.5); }
+      box-shadow: 2rem 2rem 5px rgba(36, 38, 79, 0.2), -2rem -2rem 5px rgba(199, 201, 229, 0.2); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--behind {
@@ -435,7 +445,7 @@ button {
     font-size: 2.5rem; }
   .contact__form input,
   .contact__form textarea {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #0f1143;
     width: 90%;
     height: 5rem;
@@ -452,9 +462,9 @@ button {
     .contact__form textarea:invalid {
       border-bottom: 2px solid #ffadad; }
   .contact__form textarea {
-    font-size: 1.6rem;
     resize: none;
-    height: 20rem; }
+    height: 20rem;
+    font-family: "Kanit", sans-serif; }
   .contact__form--buttons {
     margin-top: 10rem;
     width: 60%;
@@ -472,7 +482,7 @@ button {
 
 .navi__menu--dropdown {
   position: absolute;
-  top: 5.5rem;
+  top: 5.7rem;
   right: 0;
   width: 15rem;
   background: #f6c8a2;

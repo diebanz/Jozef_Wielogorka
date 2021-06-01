@@ -9,7 +9,7 @@
 
     input,
     textarea {
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: $color-tertiary-dark;
         width: 90%;
         height: 5rem;
@@ -30,9 +30,9 @@
     }
 
     textarea {
-        font-size: 1.6rem;
         resize: none;
         height: 20rem;
+        font-family: $regular-font;
     }
 
     &--buttons {

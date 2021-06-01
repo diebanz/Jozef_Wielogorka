@@ -26,7 +26,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            box-shadow: 3rem 3rem 1px #995d0b26, -3rem -3rem 1px #f6c8a24d;
+            box-shadow: 2rem 2rem 5px #995d0b26, -2rem -2rem 5px #f6c8a24d;
 
             &-1 {
                 background: linear-gradient(
@@ -36,7 +36,7 @@
                     #47595c 99.99%,
                     #47595c 100%
                 );
-                box-shadow: -3rem -3rem 1px #cae2e24d, 3rem 3rem 1px #47595c4d;
+                box-shadow: -2rem -2rem 5px #cae2e24d, 2rem 2rem 5px #47595c4d;
             }
         }
 
@@ -48,8 +48,8 @@
             top: 0;
             left: 0;
             background: linear-gradient(333.63deg, #24264f, #c7c9e5, #fdfdfd);
-            box-shadow: 30px 30px 1px rgba($color-tertiary, 0.5),
-                -30px -30px 1px rgba($color-tertiary-light, 0.5);
+            box-shadow: 2rem 2rem 5px rgba($color-tertiary, 0.2),
+                -2rem -2rem 5px rgba($color-tertiary-light, 0.2);
         }
     }
 
