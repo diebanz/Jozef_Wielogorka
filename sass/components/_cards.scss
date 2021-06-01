@@ -1,13 +1,75 @@
 .card {
+    position: relative;
     width: 45rem;
-    height: 62.5rem;
-    background: linear-gradient(
-        333.96deg,
-        #c07304 2.87%,
-        #ea9010 50.37%,
-        #f6c8a2 98.88%
-    );
-    box-shadow: 30px 30px 1px rgba(153, 93, 11, 0.15),
-        -30px -30px 1px rgba(246, 200, 162, 0.3);
-    backdrop-filter: blur(4px);
+    height: 52.5rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    &__side {
+        width: 40rem;
+        height: 52.5rem;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        &--front {
+            background: linear-gradient(
+                333.96deg,
+                #c07304 2.87%,
+                #ea9010 50.37%,
+                #f6c8a2 98.88%
+            );
+
+            backdrop-filter: blur(4px);
+            -moz-backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 3rem 3rem 1px rgba(153, 93, 11, 0.15),
+                -3rem -3rem 1px rgba(246, 200, 162, 0.3);
+
+            &:nth-child(even) {
+                background: linear-gradient(
+                    153.03deg,
+                    #cae2e2 -1.24%,
+                    #7a9e9f 47.8%,
+                    #47595c 99.99%,
+                    #47595c 100%
+                );
+                box-shadow: -3rem -3rem 1px rgba(202, 226, 226, 0.3),
+                    3rem 3rem 1px rgba(71, 89, 92, 0.3);
+            }
+        }
+
+        &--behind {
+            transform: rotateY(180deg);
+            width: 40rem;
+            height: 52.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(
+                333.63deg,
+                #24264f 1.26%,
+                #c7c9e5 49.56%,
+                #fdfdfd 98.87%
+            );
+            box-shadow: 30px 30px 1px rgba($color-tertiary, 0.5),
+                -30px -30px 1px rgba(246, 200, 162, 0.3);
+            backdrop-filter: blur(4px);
+            -moz-backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--behind {
+        transform: rotateY(0);
+    }
 }

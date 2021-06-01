@@ -1,10 +1,18 @@
 .offer {
+    width: 100%;
+
     &__container {
-        padding: 10rem;
+        width: 90%;
+        margin: 0 auto;
+        padding: 10rem 0;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
-        gap: 10rem;
-        justify-content: center;
-        align-content: center;
+        gap: 8rem;
+        justify-items: center;
+    }
+
+    &__heading--3 {
+        font-size: 4rem;
+        text-align: center;
     }
 }

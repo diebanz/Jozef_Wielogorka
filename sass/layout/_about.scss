@@ -1,7 +1,7 @@
 .about {
     margin-bottom: 10rem;
     display: flex;
-    justify-content: space-between;
+    justify-items: flex-end;
 
     &__left {
         width: 60%;
@@ -43,26 +43,27 @@
         justify-content: flex-end;
 
         &--decoration {
-            width: 45rem;
+            width: 55%;
             height: 90vh;
             background-color: $color-secondary;
             box-shadow: -30px -30px 1px rgba(71, 89, 92, 0.15),
                 -15px -15px 1px rgba(71, 89, 92, 0.15);
-        }
 
-        &--under {
-            width: 44rem;
-            height: 64rem;
-            background-color: $color-secondary-dark;
-            backdrop-filter: blur(10px);
-            position: absolute;
-            top: 14rem;
-            left: 10rem;
-            opacity: 0.3;
+            &::before {
+                content: "";
+                width: 50%;
+                height: 64rem;
+                background-color: $color-secondary-dark;
+                backdrop-filter: blur(10px);
+                position: absolute;
+                top: 14rem;
+                left: 10rem;
+                opacity: 0.3;
+            }
         }
 
         &--picture {
-            width: 40rem;
+            width: 44%;
             height: 60rem;
             background-image: url(./../../img/about.jpg);
             background-position: center;
