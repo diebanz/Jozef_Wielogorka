@@ -36,7 +36,24 @@
                         >
                     </li>
                 </ul>
-                <div class="navi__menu">MENU</div>
+                <div class="navi__menu">
+                    <input
+                        type="checkbox"
+                        class="navi__checkbox"
+                        id="navi-toggle"
+                />
+                    <label for="navi-toggle" class="navigation__button">
+                    <span class="navi__icon"><i class="fas fa-caret-square-down"></i></span>
+                    </label>
+                    <div class="navi__menu--dropdown">
+                        <ul class="navi__menu--list">
+                            <li class="navi__menu--item"><a href="#" class="navi__menu--link">HOME</a></li>
+                            <li class="navi__menu--item"><a href="#about" class="navi__menu--link">O mnie</a></li>
+                            <li class="navi__menu--item"><a href="#offer" class="navi__menu--link">Oferta</a></li>
+                            <li class="navi__menu--item"><a href="#contact" class="navi__menu--link">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
             <div class="header__hero">
                 <div class="header__hero--decoration">

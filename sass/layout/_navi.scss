@@ -27,5 +27,26 @@
     }
 
     &__menu {
+        position: relative;
+    }
+
+    &__checkbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+    }
+
+    &__icon {
+        font-size: 4rem;
+        color: $color-primary;
+    }
+
+    &__menu--dropdown {
+        display: none;
+    }
+
+    &__checkbox:checked ~ &__menu--dropdown {
+        display: block;
     }
 }

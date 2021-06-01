@@ -1,0 +1,29 @@
+.navi__menu--dropdown {
+    position: absolute;
+    top: 5.5rem;
+    right: 0;
+    width: 15rem;
+
+    background: $color-primary-light;
+    border: 1px solid $color-primary-dark;
+    box-sizing: border-box;
+    box-shadow: 8px 8px 3px rgba(153, 93, 11, 0.2);
+}
+
+.navi__menu--list {
+    list-style: none;
+}
+
+.navi__menu--item {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.navi__menu--link {
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $color-tertiary-dark;
+    }
+}
