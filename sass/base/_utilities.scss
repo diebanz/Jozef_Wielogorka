@@ -6,6 +6,11 @@
 
 a {
     text-decoration: none;
+    color: $color-primary;
+
+    &:hover {
+        color: $color-secondary-light;
+    }
 }
 
 .green__line {
