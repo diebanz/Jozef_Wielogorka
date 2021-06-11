@@ -4,7 +4,7 @@
     label {
         margin-bottom: 1rem;
         color: $color-tertiary-dark;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     input,
@@ -13,9 +13,10 @@
         color: $color-tertiary-dark;
         width: 90%;
         height: 5rem;
-        padding: 1rem;
-        background: rgba(202, 226, 226, 0.3);
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 0.8rem;
+        background: #cae2e25f;
+        box-shadow: inset 2px 2px 2px #8fa0a0,
+            inset -2px -2px 2px $color-gray-light-2;
         border-radius: 6px;
         border: none;
 
@@ -25,7 +26,7 @@
         }
 
         &:invalid {
-            border-bottom: 2px solid #ffadad;
+            border-bottom: 1px solid $color-tertiary;
         }
     }
 
@@ -36,19 +37,21 @@
     }
 
     &--buttons {
-        margin-top: 10rem;
-        width: 60%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 90%;
+        margin: 11rem;
+
+        button,
+        span {
+            margin-right: 3rem;
+        }
     }
 }
 
 .contact__form--name,
 .contact__form--email,
 .contact__form--message {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    margin: 5rem 0;
+    margin: 5rem auto;
 }

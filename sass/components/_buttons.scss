@@ -7,7 +7,7 @@ button {
     letter-spacing: 0.1rem;
     font-size: 2rem;
     border-radius: 5rem;
-    padding: 2rem 4rem;
+    padding: 1.5rem 3rem;
     color: $color-tertiary-dark;
     transition: all 0.2s;
 
@@ -23,7 +23,7 @@ button {
         rgba($color-primary, 0.5),
         rgba($color-primary, 0.9)
     );
-    box-shadow: -2px -2px 1px transparent, 4px 4px 2px #47595c;
+    box-shadow: -2px -2px 1px transparent, 2px 2px 2px #47595c;
 
     &:hover {
         background: linear-gradient(
@@ -40,10 +40,10 @@ button {
 .btn__transparent {
     background: linear-gradient(
         145deg,
-        rgba($color-primary-light, 0.1),
-        rgba($color-primary-light, 0.4)
+        rgba($color-primary-light, 0.3),
+        rgba($color-primary-light, 0.6)
     );
-    box-shadow: 2px 2px 2px #b5b5b5, -2px -2px 2px #ffffff;
+    box-shadow: 2px 2px 2px #b5b5b5, 2px 2px 2px #ffffff;
 
     &:hover {
         background: linear-gradient(
@@ -60,8 +60,8 @@ button {
 .btn__green {
     background: linear-gradient(
         145deg,
-        rgba($color-secondary-light, 0.1),
-        rgba($color-secondary-light, 0.4)
+        rgba($color-secondary-light, 0.3),
+        rgba($color-secondary-light, 0.6)
     );
     box-shadow: 2px 2px 2px $color-secondary, -2px -2px 2px #ffffff;
 

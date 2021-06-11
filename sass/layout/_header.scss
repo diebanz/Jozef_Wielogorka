@@ -12,7 +12,7 @@
 
         &--colorbar {
             width: 55%;
-            height: 90vh;
+            height: 95vh;
             background-color: $color-primary;
             box-shadow: 40px 40px 0px rgba(153, 93, 11, 0.15),
                 20px 20px 0px rgba(153, 93, 11, 0.15);
@@ -20,17 +20,18 @@
             &::before {
                 content: "";
                 width: 56%;
-                height: 68rem;
+                height: 58rem;
                 background-color: rgba($color-primary-light, 0.5);
                 position: absolute;
                 top: 15rem;
                 left: 18rem;
+                box-shadow: -2rem 2rem 4rem rgba($color-secondary-dark, 0.4);
             }
         }
 
         &--under {
             width: 50%;
-            height: 64rem;
+            height: 54rem;
             background: linear-gradient(
                 152.45deg,
                 #ad6400 0.44%,
@@ -41,15 +42,14 @@
             backdrop-filter: blur(4px);
             -moz-backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
-            box-shadow: -4rem 4rem 4rem rgba($color-secondary-dark, 0.4);
             position: absolute;
             top: 17rem;
             left: 20rem;
         }
 
         &--picture {
-            width: 40%;
-            height: 60rem;
+            width: 50%;
+            height: 50rem;
             background-image: url(./../../img/header.png);
             background-position: center;
             background-size: cover;
@@ -71,10 +71,8 @@
             margin-bottom: 10rem;
         }
         &--buttons {
-            width: 65%;
-
             a {
-                margin-right: 4rem;
+                margin-right: 3rem;
             }
         }
     }
@@ -100,5 +98,26 @@
 
     &:hover {
         box-shadow: 0.1rem 0.1rem 0.2rem $color-primary-light;
+    }
+}
+
+@media only screen and (max-width: $bp-large) {
+    .header {
+        &__hero {
+            &--colorbar {
+                &::before {
+                    left: 15rem;
+                }
+            }
+
+            &--under {
+                left: 17rem;
+            }
+
+            &--picture {
+                width: 50%;
+                left: 16rem;
+            }
+        }
     }
 }
