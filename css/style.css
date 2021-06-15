@@ -133,7 +133,7 @@ a {
       top: 17rem;
       left: 20rem; }
     .header__hero--picture {
-      width: 50%;
+      width: 46%;
       height: 50rem;
       background-image: url(./../../img/header.png);
       background-position: center;
@@ -301,15 +301,15 @@ a {
   .contact__line {
     margin-left: -2rem; }
   .contact__hero--colorbar::before {
+    width: 60%;
     top: 12rem;
-    left: 15rem; }
-  .contact--under {
+    left: 14rem; }
+  .contact__hero--under {
     width: 52%;
-    top: 14rem;
-    left: 17rem; }
-  .contact--picture {
-    top: 18rem;
-    left: 17rem; } }
+    left: 16rem; }
+  .contact__hero--picture {
+    width: 52%;
+    left: 16rem; } }
 
 .offer {
   margin-bottom: 10rem;

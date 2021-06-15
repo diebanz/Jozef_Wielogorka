@@ -80,10 +80,8 @@
     }
 }
 
-
 @media only screen and (max-width: $bp-large) {
     .contact {
-
         &__heading {
             margin-left: -18rem;
         }
@@ -93,28 +91,25 @@
         }
 
         &__hero {
-
             &--colorbar {
-         
                 &::before {
-                top: 12rem;
-                left: 15rem;
+                    width: 60%;
+                    top: 12rem;
+                    left: 14rem;
                 }
             }
-        }
 
-        &--under {
-            width: 52%;
-            top: 14rem;
-            left: 17rem;
-        }
+            &--under {
+                width: 52%;
 
-        &--picture {
-            top: 18rem;
-            left: 17rem;
-        }
+                left: 16rem;
+            }
 
+            &--picture {
+                width: 52%;
+
+                left: 16rem;
+            }
+        }
     }
-
-
 }
