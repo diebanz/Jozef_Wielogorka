@@ -221,3 +221,35 @@
         }
     }
 }
+
+@media only screen and (max-width: $bp-mobile-ls) {
+    .about {
+        &__right {
+            width: 90%;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+
+            &--decoration {
+                width: 100%;
+                height: 25vh;
+                box-shadow: 30px 30px 1px rgba(71, 89, 92, 0.15),
+                    15px 15px 1px rgba(71, 89, 92, 0.15);
+
+                &::before {
+                    width: 50%;
+                    height: 29rem;
+                    top: 4rem;
+                    left: 2rem;
+                }
+            }
+
+            &--picture {
+                width: 42%;
+                height: 25rem;
+                top: 6rem;
+                left: 4rem;
+            }
+        }
+    }
+}
