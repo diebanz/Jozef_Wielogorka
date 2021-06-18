@@ -550,9 +550,10 @@ a {
   margin-bottom: 10rem;
   width: 100%; }
   .contact__heading {
-    margin-left: -20rem; }
+    margin-left: -22rem;
+    margin-top: 0.4rem; }
   .contact__line {
-    margin-left: -8rem; }
+    margin-left: -13rem; }
   .contact__hero {
     display: flex; }
     .contact__hero--decoration {
@@ -603,7 +604,7 @@ a {
   .contact__heading {
     margin-left: -18rem; }
   .contact__line {
-    margin-left: -2rem; }
+    margin-left: -6rem; }
   .contact__hero--colorbar::before {
     width: 60%;
     top: 12rem;
