@@ -32,7 +32,7 @@
 
         &__container {
             width: 100%;
-            padding: 5rem;
+            padding: 5rem 0;
             grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
             gap: 4rem;
             justify-items: center;
@@ -41,6 +41,18 @@
         &__heading--3 {
             font-size: 3rem;
             text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: $bp-mobile-ls) {
+    .offer {
+        &__container {
+            row-gap: 10rem;
+        }
+
+        &__heading--3 {
+            font-size: 2.5rem;
         }
     }
 }

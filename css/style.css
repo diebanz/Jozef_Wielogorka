@@ -347,11 +347,8 @@ a {
         .header__hero--buttons a {
           margin-right: 0; }
     .header__span {
-      color: #c47200;
-      letter-spacing: 0.5rem;
-      text-shadow: 2px 2px 1px #0f1143; }
+      letter-spacing: 0.5rem; }
       .header__span--1 {
-        color: #c47200;
         letter-spacing: 0.2rem; } }
 
 .about {
@@ -519,6 +516,36 @@ a {
       top: 6rem;
       left: 4rem; } }
 
+@media only screen and (max-width: 450px) {
+  .about {
+    margin-bottom: 5rem; }
+    .about__left {
+      padding-right: 0; }
+      .about__left--text {
+        text-indent: 3rem;
+        padding: 1rem; }
+        .about__left--text p {
+          margin-bottom: 2rem; }
+      .about__left--button {
+        margin-top: 2rem; }
+    .about__right {
+      width: 100%; }
+      .about__right--decoration {
+        width: 100%;
+        height: 25vh;
+        box-shadow: 0 30px 1px rgba(71, 89, 92, 0.15), 0 15px 1px rgba(71, 89, 92, 0.15); }
+        .about__right--decoration::before {
+          width: 95%;
+          height: 29rem;
+          top: 7rem;
+          left: 1rem; }
+      .about__right--picture {
+        width: 85%;
+        height: 25rem;
+        top: 9rem;
+        left: 3rem;
+        background-position: top center; } }
+
 .contact {
   margin-bottom: 10rem;
   width: 100%; }
@@ -678,6 +705,33 @@ a {
     top: 9rem;
     left: 4rem; } }
 
+@media only screen and (max-width: 450px) {
+  .contact {
+    margin-bottom: 10rem;
+    width: 100%; }
+    .contact__hero--colorbar {
+      width: 100%;
+      height: 20vh;
+      box-shadow: 0 30px 1px rgba(71, 89, 92, 0.15), 0 15px 1px rgba(71, 89, 92, 0.15); }
+      .contact__hero--colorbar::before {
+        width: 95%;
+        height: 29rem;
+        top: 7rem;
+        left: 1rem; }
+    .contact__hero--under {
+      width: 85%;
+      height: 25rem;
+      top: 9rem;
+      left: 3rem; }
+    .contact__hero--picture {
+      width: 80%;
+      height: 25rem;
+      top: 9rem;
+      left: 3rem; }
+    .contact__hero--box {
+      width: 90%;
+      margin: 25rem auto 0; } }
+
 .offer {
   margin-bottom: 10rem;
   width: 100%;
@@ -705,13 +759,19 @@ a {
     background-color: rgba(246, 200, 162, 0.3); }
     .offer__container {
       width: 100%;
-      padding: 5rem;
+      padding: 5rem 0;
       grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
       gap: 4rem;
       justify-items: center; }
     .offer__heading--3 {
       font-size: 3rem;
       text-align: center; } }
+
+@media only screen and (max-width: 576px) {
+  .offer__container {
+    row-gap: 10rem; }
+  .offer__heading--3 {
+    font-size: 2.5rem; } }
 
 .footer {
   padding-top: 5rem;
