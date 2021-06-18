@@ -77,3 +77,20 @@
         }
     }
 }
+
+@media only screen and (max-width: $bp-mobile) {
+    .card {
+        width: 30rem;
+        height: 40rem;
+
+        &__side {
+            width: 30rem;
+            height: 40rem;
+
+            &--behind {
+                width: 30rem;
+                height: 40rem;
+            }
+        }
+    }
+}

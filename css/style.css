@@ -945,6 +945,17 @@ button {
         width: 35rem;
         height: 45rem; } }
 
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 30rem;
+    height: 40rem; }
+    .card__side {
+      width: 30rem;
+      height: 40rem; }
+      .card__side--behind {
+        width: 30rem;
+        height: 40rem; } }
+
 .contact__form {
   width: 90%; }
   .contact__form label {
