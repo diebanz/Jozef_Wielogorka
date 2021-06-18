@@ -759,7 +759,7 @@ a {
     background-color: rgba(246, 200, 162, 0.3); }
     .offer__container {
       width: 100%;
-      padding: 5rem 0;
+      padding: 5rem 1rem;
       grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
       gap: 4rem;
       justify-items: center; }
@@ -769,7 +769,8 @@ a {
 
 @media only screen and (max-width: 576px) {
   .offer__container {
-    row-gap: 10rem; }
+    row-gap: 10rem;
+    padding: 5rem 0; }
   .offer__heading--3 {
     font-size: 2.5rem; } }
 

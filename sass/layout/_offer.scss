@@ -32,7 +32,7 @@
 
         &__container {
             width: 100%;
-            padding: 5rem 0;
+            padding: 5rem 1rem;
             grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
             gap: 4rem;
             justify-items: center;
@@ -49,6 +49,7 @@
     .offer {
         &__container {
             row-gap: 10rem;
+            padding: 5rem 0;
         }
 
         &__heading--3 {
