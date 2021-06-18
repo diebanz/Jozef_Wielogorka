@@ -76,3 +76,9 @@ button {
         box-shadow: -2px -2px 1px transparent, 4px 4px 2px $color-primary-light;
     }
 }
+
+@media only screen and (max-width: $bp-big) {
+    .btn {
+        font-size: 1.7rem;
+    }
+}

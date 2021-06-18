@@ -23,3 +23,24 @@
 .offer__line {
     margin-left: 1rem;
 }
+
+@media only screen and (max-width: $bp-big) {
+    .offer {
+        margin-bottom: 10rem;
+        width: 100%;
+        background-color: rgba($color-primary-light, 0.3);
+
+        &__container {
+            width: 100%;
+            padding: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+            gap: 4rem;
+            justify-items: center;
+        }
+
+        &__heading--3 {
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+}

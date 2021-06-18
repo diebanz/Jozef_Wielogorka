@@ -26,7 +26,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            box-shadow: 2rem 2rem 5px #995d0b26, -2rem -2rem 5px #f6c8a24d;
+            box-shadow: 1rem 1rem 5px #995d0b26, -1rem -1rem 5px #f6c8a24d;
 
             &-1 {
                 background: linear-gradient(
@@ -36,27 +36,44 @@
                     #47595c 99.99%,
                     #47595c 100%
                 );
-                box-shadow: -2rem -2rem 5px #cae2e24d, 2rem 2rem 5px #47595c4d;
+                box-shadow: -1rem -1rem 5px #cae2e24d, 1rem 1rem 5px #47595c4d;
             }
         }
 
         &--behind {
-            transform: rotateY(180deg);
+            opacity: 0;
             width: 40rem;
             height: 52.5rem;
             position: absolute;
             top: 0;
             left: 0;
             background: linear-gradient(333.63deg, #24264f, #c7c9e5, #fdfdfd);
-            box-shadow: 2rem 2rem 5px rgba($color-tertiary, 0.2),
-                -2rem -2rem 5px rgba($color-tertiary-light, 0.2);
+            box-shadow: 1rem 1rem 5px rgba($color-tertiary, 0.2),
+                -1rem -1rem 5px rgba($color-tertiary-light, 0.2);
         }
     }
 
     &:hover &__side--front {
-        transform: rotateY(-180deg);
+        opacity: 0;
     }
     &:hover &__side--behind {
-        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: $bp-big) {
+    .card {
+        width: 35rem;
+        height: 45rem;
+
+        &__side {
+            width: 35rem;
+            height: 45rem;
+
+            &--behind {
+                width: 35rem;
+                height: 45rem;
+            }
+        }
     }
 }

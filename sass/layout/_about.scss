@@ -10,7 +10,7 @@
         align-items: flex-end;
         padding-right: 2rem;
 
-        margin: 4.8rem 0;
+        margin: 6.2rem 0;
 
         &--heading {
             margin-right: -20rem;
@@ -80,23 +80,76 @@
 
 @media only screen and (max-width: $bp-large) {
     .about {
-    
         &__left {
             margin: 6rem 0;
         }
 
         &__right {
-
-             &--decoration {
-        
+            &--decoration {
                 &::before {
-                left:10rem;
+                    left: 10rem;
                 }
             }
         }
 
         &--picture {
             left: 15rem;
+        }
+    }
+}
+
+@media only screen and (max-width: $bp-big) {
+    .about {
+        margin-bottom: 5rem;
+
+        &__left {
+            width: 65%;
+            padding-right: 2rem;
+            margin: 7.8rem 0;
+
+            &--heading {
+                margin-right: -10rem;
+            }
+
+            &--line {
+                margin-right: -1rem;
+            }
+
+            &--text {
+                text-align: center;
+                text-indent: 10rem;
+                font-size: 1.6rem;
+                padding: 5rem 0 0 5rem;
+
+                p {
+                    margin-bottom: 1.6rem;
+                }
+            }
+
+            &--button {
+                margin-top: 2rem;
+            }
+        }
+
+        &__right {
+            width: 35%;
+
+            &--decoration {
+                width: 55%;
+                height: 90vh;
+
+                &::before {
+                    width: 92%;
+                    height: 50rem;
+                    left: 2rem;
+                }
+            }
+
+            &--picture {
+                width: 80%;
+                height: 46rem;
+                left: 4rem;
+            }
         }
     }
 }

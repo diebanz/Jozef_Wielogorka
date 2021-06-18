@@ -24,3 +24,11 @@ a {
     height: 2px;
     background-color: $color-tertiary-dark;
 }
+
+@media only screen and (max-width: $bp-big) {
+    .orange__line {
+        width: 50rem;
+        height: 2px;
+        background-color: $color-primary;
+    }
+}

@@ -29,3 +29,28 @@
         font-weight: 400;
     }
 }
+
+@media only screen and (max-width: $bp-big) {
+    .heading {
+        line-height: 1.3;
+
+        &__1 {
+            font-size: 6rem;
+            margin-top: 3rem;
+            letter-spacing: 3px;
+        }
+
+        &__2 {
+            font-size: 5rem;
+            letter-spacing: 3px;
+        }
+        &__3 {
+            font-size: 3rem;
+
+            text-transform: uppercase;
+        }
+        &__4 {
+            font-size: 2.2rem;
+        }
+    }
+}

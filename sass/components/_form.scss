@@ -55,3 +55,44 @@
     flex-direction: column;
     margin: 5rem auto;
 }
+
+@media only screen and (max-width: $bp-big) {
+    .contact__form {
+        width: 100%;
+
+        label {
+            margin-bottom: 0.6rem;
+            font-size: 1.8rem;
+        }
+
+        input,
+        textarea {
+            font-size: 1.8rem;
+            height: 5rem;
+        }
+
+        textarea {
+            resize: none;
+            height: 15rem;
+            font-family: $regular-font;
+        }
+
+        &--buttons {
+            width: 100%;
+            margin: 1rem;
+
+            button,
+            span {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .contact__form--name,
+    .contact__form--email,
+    .contact__form--message {
+        width: 100%;
+
+        margin: 5rem auto;
+    }
+}
