@@ -92,7 +92,43 @@
     .contact__form--email,
     .contact__form--message {
         width: 100%;
-
         margin: 5rem auto;
+    }
+}
+
+@media only screen and (max-width: $bp-tablet) {
+    .contact__form {
+        width: 100%;
+
+        label {
+            margin-bottom: 1rem;
+            color: $color-tertiary-dark;
+            font-size: 2.2rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+        }
+
+        textarea {
+            resize: none;
+            height: 20rem;
+            font-family: $regular-font;
+        }
+
+        &--buttons {
+            width: 100%;
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .contact__form--name,
+    .contact__form--email,
+    .contact__form--message {
+        width: 100%;
     }
 }

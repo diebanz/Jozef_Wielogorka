@@ -32,3 +32,10 @@ a {
         background-color: $color-primary;
     }
 }
+
+@media only screen and (max-width: $bp-tablet) {
+    .green__line {
+        width: 21rem;
+        height: 2px;
+    }
+}

@@ -82,3 +82,9 @@ button {
         font-size: 1.7rem;
     }
 }
+
+@media only screen and (max-width: $bp-tablet) {
+    .btn {
+        margin: 1.5rem 0;
+    }
+}
