@@ -178,7 +178,7 @@ a {
     .header__hero--picture {
       width: 46%;
       height: 50rem;
-      background-image: url(./../../img/header.png);
+      background-image: url('/static/img/header.png');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -399,7 +399,7 @@ a {
     .about__right--picture {
       width: 50%;
       height: 50rem;
-      background-image: url(./../../img/about.jpg);
+      background-image: url('/static/img/about.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -586,7 +586,7 @@ a {
     .contact__hero--picture {
       width: 50%;
       height: 50rem;
-      background-image: url(./../../img/contact.png);
+      background-image: url('/static/img/contact.png');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
