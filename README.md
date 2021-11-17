@@ -1,5 +1,6 @@
-# Jozef Wielogorka
-Project of the website for mr. Jozef Wielogorka. Personal website of honey seller.
+# Project of the website for mr. Jozef Wielogorka. Personal website of honey seller.
+
+## Collaboration with [Sebastian Banz](https://github.com/derbanz) 
 
 
 ### TECHNOLOGIES USED:
@@ -7,12 +8,15 @@ Project of the website for mr. Jozef Wielogorka. Personal website of honey selle
 - CSS
 - SASS
 - JavaScript
+- Django
+- Python
 
 ### MY GOALS
 * ✔️ responsive webdesign
 * ✔️ performance, accessibility, SEO, best practices above 90%
 * ✔️ individual and original design
 * ✔️ keeping design simple and clean
+* ✔️ allowing dynamic content addition
 
 ### LINKS
 
