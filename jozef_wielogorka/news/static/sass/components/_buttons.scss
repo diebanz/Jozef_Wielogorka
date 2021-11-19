@@ -17,6 +17,7 @@ button {
 }
 
 .btn__orange {
+    cursor: pointer;
     font-weight: 700;
     background: linear-gradient(
         145deg,
@@ -38,6 +39,7 @@ button {
 }
 
 .btn__transparent {
+    cursor: pointer;
     background: linear-gradient(
         145deg,
         rgba($color-primary-light, 0.3),
@@ -75,6 +77,10 @@ button {
         transform: translateY(-2px);
         box-shadow: -2px -2px 1px transparent, 4px 4px 2px $color-primary-light;
     }
+}
+
+.btn__div {
+    display: inline-block;
 }
 
 @media only screen and (max-width: $bp-big) {

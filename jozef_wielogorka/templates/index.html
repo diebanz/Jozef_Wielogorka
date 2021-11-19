@@ -5,14 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Kaushan+Script&display=swap"
-        rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Kaushan+Script&display=swap"
+            rel="stylesheet"
         />
         <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-        crossorigin="anonymous"
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous"
         />
         {% load static %}
         <link rel="stylesheet" href="{% static '/css/normaliser.css' %}" />
@@ -93,17 +93,13 @@
             </div>
         </header>
         <main>
-            <section>
-                {% load markdownify %}
-                <h2>
-                    {{ news.title }}
-                </h2>
-                <p>
-                    {{ news.date }}
-                </p>
-                <p>
-                    {{ news.body|markdownify }}
-                </p>
+            <section class="blog">
+                <div class="blog__container">
+                    {% load markdownify %}
+                    <h2 class="blog__title">{{ news.title }}</h2>
+                    <small>{{ news.date }} Jozef Wielogórka</small>
+                    <p class="blog__text">{{ news.body|markdownify }}</p>
+                </div>
             </section>
             <section class="about" id="about">
                 <div class="about__left">
@@ -209,34 +205,33 @@
                             Skontaktujmy się
                         </h2>
                         <div class="orange__line contact__line"></div>
-                        <form action='/#' method="POST" class="contact__form" id="form">
-                            {% csrf_token %}
-                            
-                            {{ form.non_field_errors }}
-                            
-                            {{ form.source.errors }}
-                            {{ form.source }}
+                        <form
+                            action="/#"
+                            method="POST"
+                            class="contact__form"
+                            id="form"
+                        >
+                            {% csrf_token %} {{ form.non_field_errors }}
                             <div class="contact__form--name">
                                 <label for="name">Imię i nazwisko:</label>
-                                {{ form.name.errors }}
-                                {{ form.name }}
+                                {{ form.name.errors }} {{ form.name }}
                             </div>
                             <div class="contact__form--email">
                                 <label for="email">Twój email:</label>
-                                {{ form.email.errors }}
-                                {{ form.email }}
+                                {{ form.email.errors }} {{ form.email }}
                             </div>
                             <div class="contact__form--message">
                                 <label for="message">Wiadomość: </label>
-                                {{ form.message.errors }}
-                                {{ form.message }}
+                                {{ form.message.errors }} {{ form.message }}
                             </div>
                             <div class="contact__form--buttons">
                                 <button type="submit" class="btn btn__orange">
                                     Wyślij Wiadomość
                                 </button>
-                                <span class="contact__span">albo</span>
-                                <button class="btn btn__green">zadzwoń</button>
+                                <span class="contact__span">lub</span>
+                                <div class="btn btn__green btn__div">
+                                    zadzwoń
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -247,7 +242,14 @@
         <footer class="footer" id="footer">
             <div class="footer__container">
                 <div id="map" class="footer__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.402354541655!2d13.19926991580748!3d52.521073179814415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a857b31c439471%3A0x488bc11a3b0411e1!2sBetckestra%C3%9Fe%2C%2013595%20Berlin!5e1!3m2!1sen!2sde!4v1637301202420!5m2!1sen!2sde" width="500" height="375" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.402354541655!2d13.19926991580748!3d52.521073179814415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a857b31c439471%3A0x488bc11a3b0411e1!2sBetckestra%C3%9Fe%2C%2013595%20Berlin!5e1!3m2!1sen!2sde!4v1637301202420!5m2!1sen!2sde"
+                        width="500"
+                        height="375"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                    ></iframe>
                 </div>
                 <div class="footer__info">
                     <h3 class="heading heading__3 footer__info--h3">
@@ -301,12 +303,15 @@
             </div>
             <div class="footer__credits">
                 <h4 class="heading heading__4 footer__credits--text">
-                    &copy;
+                    &copy; Jozef Wielogorka
+                </h4>
+                <h4 class="heading heading__4 footer__credits--text">
+                    created by
                     <a
-                        href="http://nataliabanz.netlify.app"
+                        href="http://banz-devs.tech"
                         target="_blank"
                         rel="noopener"
-                        >Natalia Banz</a
+                        >BanzDevs Team</a
                     >
                     | 2021
                 </h4>
