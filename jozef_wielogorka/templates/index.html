@@ -17,7 +17,6 @@
         {% load static %}
         <link rel="stylesheet" href="{% static '/css/normaliser.css' %}" />
         <link rel="stylesheet" href="{% static '/css/style.css' %}" />
-        <script src="{% static 'index.js' %}"></script>
         <title>Józef Wielogórka | Polski Miód</title>
     </head>
     <body>
@@ -210,45 +209,57 @@
                             Skontaktujmy się
                         </h2>
                         <div class="orange__line contact__line"></div>
-                        <form action="#" class="contact__form" id="form">
+                        <form action='/#' method="POST" class="contact__form" id="form">
+                            {% csrf_token %}
+                            
+                            {{ form.non_field_errors }}
+                            
+                            {{ form.source.errors }}
+                            {{ form.source }}
                             <div class="contact__form--name">
                                 <label for="name">Imię i nazwisko:</label>
-                                <input
+                                <!-- <input
                                     type="text"
                                     id="name"
                                     name="_name"
                                     maxlength="50"
                                     minlength="2"
                                     required
-                                />
+                                /> -->
+                                {{ form.name.errors }}
+                                {{ form.name }}
                             </div>
                             <div class="contact__form--email">
                                 <label for="email">Twój email:</label>
-                                <input
+                                <!-- <input
                                     type="text"
                                     id="email"
                                     name="_replayto"
                                     maxlength="50"
                                     minlength="2"
                                     required
-                                />
+                                /> -->
+                                {{ form.email.errors }}
+                                {{ form.email }}
                             </div>
                             <div class="contact__form--message">
                                 <label for="message">Wiadomość: </label>
-                                <textarea
+                                <!-- <textarea
                                     name="message"
                                     id="message"
                                     maxlength="1000"
-                                ></textarea>
+                                ></textarea> -->
+                                {{ form.message.errors }}
+                                {{ form.message }}
+                            </div>
+                            <div class="contact__form--buttons">
+                                <button type="submit" class="btn btn__orange">
+                                    Wyślij Wiadomość
+                                </button>
+                                <span class="contact__span">albo</span>
+                                <button class="btn btn__green">zadzwoń</button>
                             </div>
                         </form>
-                        <div class="contact__form--buttons">
-                            <button type="submit" class="btn btn__orange">
-                                Wyślij Wiadomość
-                            </button>
-                            <span class="contact__span">albo</span>
-                            <button class="btn btn__green">zadzwoń</button>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -256,7 +267,9 @@
         </main>
         <footer class="footer" id="footer">
             <div class="footer__container">
-                <div id="map" class="footer__map">My map will go here...</div>
+                <div id="map" class="footer__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.402354541655!2d13.19926991580748!3d52.521073179814415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a857b31c439471%3A0x488bc11a3b0411e1!2sBetckestra%C3%9Fe%2C%2013595%20Berlin!5e1!3m2!1sen!2sde!4v1637301202420!5m2!1sen!2sde" width="500" height="375" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
                 <div class="footer__info">
                     <h3 class="heading heading__3 footer__info--h3">
                         Józef <br />
