@@ -1,0 +1,53 @@
+.navi {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba($color-primary-light, 0.1);
+    border-bottom: 1px solid rgba($color-primary, 0.5);
+
+    &__list {
+        list-style: none;
+
+        &--link {
+            color: $color-tertiary-dark;
+            font-size: 2rem;
+
+            &:hover {
+                color: $color-secondary-dark;
+            }
+        }
+    }
+
+    &__menu {
+        position: relative;
+    }
+
+    &__checkbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+    }
+
+    &__icon {
+        font-size: 4rem;
+        color: $color-primary;
+    }
+
+    &__menu--dropdown {
+        display: none;
+    }
+
+    &__checkbox:checked ~ &__menu--dropdown {
+        display: block;
+    }
+}

@@ -1,0 +1,96 @@
+.card {
+    position: relative;
+    width: 45rem;
+    height: 52.5rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    &__side {
+        width: 40rem;
+        height: 52.5rem;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        &--front {
+            background: linear-gradient(
+                333.96deg,
+                #c07304 2.87%,
+                #ea9010 50.37%,
+                #f6c8a2 98.88%
+            );
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 1rem 1rem 5px #995d0b26, -1rem -1rem 5px #f6c8a24d;
+
+            &-1 {
+                background: linear-gradient(
+                    153.03deg,
+                    #cae2e2 -1.24%,
+                    #7a9e9f 47.8%,
+                    #47595c 99.99%,
+                    #47595c 100%
+                );
+                box-shadow: -1rem -1rem 5px #cae2e24d, 1rem 1rem 5px #47595c4d;
+            }
+        }
+
+        &--behind {
+            opacity: 0;
+            width: 40rem;
+            height: 52.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(333.63deg, #24264f, #c7c9e5, #fdfdfd);
+            box-shadow: 1rem 1rem 5px rgba($color-tertiary, 0.2),
+                -1rem -1rem 5px rgba($color-tertiary-light, 0.2);
+        }
+    }
+
+    &:hover &__side--front {
+        opacity: 0;
+    }
+    &:hover &__side--behind {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: $bp-big) {
+    .card {
+        width: 35rem;
+        height: 45rem;
+
+        &__side {
+            width: 35rem;
+            height: 45rem;
+
+            &--behind {
+                width: 35rem;
+                height: 45rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $bp-mobile) {
+    .card {
+        width: 30rem;
+        height: 40rem;
+
+        &__side {
+            width: 30rem;
+            height: 40rem;
+
+            &--behind {
+                width: 30rem;
+                height: 40rem;
+            }
+        }
+    }
+}
