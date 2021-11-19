@@ -18,8 +18,7 @@ def home(request):
             email_1 = EmailMessage(
                 f'New message on <website> by {email_address}',
                 message,
-                to=['sebanzian@gmail.com'],
-                from_email='System',
+                to=['jozek@wielomiod.pl'],
             )
             email_1.send()
             message = f"Hello {name},\n\nWe received your contact request, thank you for reaching out. We will try and answer within 72 hours.\n\nBest regards,\nJozef Wielogorka"
@@ -27,7 +26,6 @@ def home(request):
                 'Contact request sent',
                 message,
                 to=[email_address],
-                from_email='no_reply'
             )
             email_2.send()
             messages.success(

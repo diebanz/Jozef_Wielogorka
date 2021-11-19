@@ -190,11 +190,11 @@ MARKDOWNIFY = {
 # Contact Email settings
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
+EMAIL_HOST = 'mail.wielomiod.pl'
+EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 
-DEFAULT_FROM_EMAIL = 'noreply<no_reply@sebanzian.com>'
+DEFAULT_FROM_EMAIL = 'noreply<no-reply@wielomiod.pl>'
 
 # nginx
 
