@@ -218,37 +218,16 @@
                             {{ form.source }}
                             <div class="contact__form--name">
                                 <label for="name">Imię i nazwisko:</label>
-                                <!-- <input
-                                    type="text"
-                                    id="name"
-                                    name="_name"
-                                    maxlength="50"
-                                    minlength="2"
-                                    required
-                                /> -->
                                 {{ form.name.errors }}
                                 {{ form.name }}
                             </div>
                             <div class="contact__form--email">
                                 <label for="email">Twój email:</label>
-                                <!-- <input
-                                    type="text"
-                                    id="email"
-                                    name="_replayto"
-                                    maxlength="50"
-                                    minlength="2"
-                                    required
-                                /> -->
                                 {{ form.email.errors }}
                                 {{ form.email }}
                             </div>
                             <div class="contact__form--message">
                                 <label for="message">Wiadomość: </label>
-                                <!-- <textarea
-                                    name="message"
-                                    id="message"
-                                    maxlength="1000"
-                                ></textarea> -->
                                 {{ form.message.errors }}
                                 {{ form.message }}
                             </div>
@@ -333,7 +312,5 @@
                 </h4>
             </div>
         </footer>
-        <!-- missing google api key -->
-        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
     </body>
 </html>
