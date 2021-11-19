@@ -41,7 +41,7 @@ def home(request):
                 'Unsuccessful, please try again.'
             )
     form = ContactForm()
-    current = News.objects.all().order_by('-id')[0]
+    current = News.objects.order_by('-id').first()
     context = {
         'form': form,
         'news': current,
