@@ -21,5 +21,5 @@
 ### LINKS
 
 * FIGMA [WIREFRAME](https://www.figma.com/file/TAsoIHnEvvr3AzdgYl512R/Honey?node-id=0%3A1)
-* [PREVIEW](https://jozefwielogo.netlify.app/)
+* [PREVIEW](https://www.wielomiod.pl)
 
