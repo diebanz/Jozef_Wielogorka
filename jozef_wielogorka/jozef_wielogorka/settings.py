@@ -138,9 +138,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'news/static'),
+#]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
@@ -190,8 +190,8 @@ MARKDOWNIFY = {
 # Contact Email settings
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.wielomiod.pl'
-EMAIL_PORT = 465
+EMAIL_HOST = 'mail.your-server.de'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 DEFAULT_FROM_EMAIL = 'noreply<no-reply@wielomiod.pl>'
