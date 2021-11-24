@@ -16,8 +16,8 @@ def home(request):
             email_address = form.cleaned_data['email']
             message = form.cleaned_data['message']
             email_1 = EmailMessage(
-                f'New message on <website> by {email_address}',
-                message,
+                f'New message on wielomiod.pl by {email_address}',
+                message + f'\n\n<a href="mailto:{email_address}?body={message}">Reply here</a>',
                 to=['jozek@wielomiod.pl'],
             )
             email_1.send()
