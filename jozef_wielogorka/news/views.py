@@ -14,14 +14,14 @@ def home(request):
         if form.is_valid():
             name = form.cleaned_data['name']
             email_address = form.cleaned_data['email']
-            message = form.cleaned_data['message']
+            message = form.cleaned_data['message'] + f'\n\n<a href="mailto:{email_address}?body={message}">Odpowiedz tutaj</a>'
             email_1 = EmailMessage(
-                f'New message on wielomiod.pl by {email_address}',
-                message + f'\n\n<a href="mailto:{email_address}?body={message}">Reply here</a>',
+                f'Nowa wiadomość na wielomiod.pl napisana przez {email_address}',
+                message,
                 to=['jozek@wielomiod.pl'],
             )
             email_1.send()
-            message = f"Hello {name},\n\nWe received your contact request, thank you for reaching out. We will try and answer within 72 hours.\n\nBest regards,\nJozef Wielogorka"
+            message = f"Hej {name},\nOtrzymałem Twoją prośbę o kontakt. Dziękuję ! Postaram się odpowiedzieć w ciągu najbliższych 72 godzin.\n\nPozdrawiam,\nJózek Wielogorka"
             email_2 = EmailMessage(
                 'Contact request sent',
                 message,
