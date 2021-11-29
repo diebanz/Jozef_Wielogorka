@@ -15,8 +15,7 @@ def home(request):
             name = form.cleaned_data['name']
             email_address = form.cleaned_data['email']
             msg = form.cleaned_data['message']
-            message = msg + 'test' + f'\n\n<a href="mailto:{{{email_address}}}?subject={{Re: Your Request}}?body={{{message}}}">Odpowiedz tutaj</a>'
-            email_1 = create_mail_to_owner(message, email_address, name)
+            email_1 = create_mail_to_owner(msg, email_address, name)
             email_1.send()
             message = f"Hej {name},\nOtrzymałem Twoją prośbę o kontakt. Dziękuję ! Postaram się odpowiedzieć w ciągu najbliższych 72 godzin.\n\nPozdrawiam,\nJózek Wielogorka"
             email_2 = EmailMessage(
