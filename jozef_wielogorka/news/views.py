@@ -14,8 +14,8 @@ def home(request):
         if form.is_valid():
             name = form.cleaned_data['name']
             email_address = form.cleaned_data['email']
-            message = form.cleaned_data['message'] + 'test' + f'\n\n<a href="mailto:{email_address}?body={message}">Odpowiedz tutaj</a>'
-            # message = form.cleaned_date['message']
+            msg = form.cleaned_data['message']
+            message = msg + 'test' + f'\n\n<a href="mailto:{{{email_address}}}?subject={{Re: Your Request}}?body={{{message}}}">Odpowiedz tutaj</a>'
             email_1 = EmailMessage(
                 f'Nowa wiadomość na wielomiod.pl napisana przez {email_address}',
                 message,
