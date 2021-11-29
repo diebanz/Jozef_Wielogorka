@@ -82,6 +82,6 @@ def create_mail_to_owner(msg, target, target_name):
     translation_table = msg.maketrans(special_characters)
     return EmailMessage(
                 f'Nowa wiadomość na wielomiod.pl napisana przez {target}',
-                f'Dzień dobry {target_name},\n\n\n' + msg.translate(translation_table),
+                f'Dzień dobry {target_name},\n\n\n' + f'mailto:{{{target}}}?subject={{Re%3AYour%20Request}}&{{{msg.translate(translation_table)}}}'',
                 to=['jozek@wielomiod.pl'],
             )
