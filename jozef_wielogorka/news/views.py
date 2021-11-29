@@ -16,11 +16,7 @@ def home(request):
             email_address = form.cleaned_data['email']
             msg = form.cleaned_data['message']
             message = msg + 'test' + f'\n\n<a href="mailto:{{{email_address}}}?subject={{Re: Your Request}}?body={{{message}}}">Odpowiedz tutaj</a>'
-            email_1 = EmailMessage(
-                f'Nowa wiadomość na wielomiod.pl napisana przez {email_address}',
-                message,
-                to=['jozek@wielomiod.pl'],
-            )
+            email_1 = create_mail_to_owner(message, email_address, name)
             email_1.send()
             message = f"Hej {name},\nOtrzymałem Twoją prośbę o kontakt. Dziękuję ! Postaram się odpowiedzieć w ciągu najbliższych 72 godzin.\n\nPozdrawiam,\nJózek Wielogorka"
             email_2 = EmailMessage(
@@ -46,3 +42,46 @@ def home(request):
         'news': current,
     }
     return render(request, 'index.html', context)
+
+
+def create_mail_to_owner(msg, target, target_name):
+    special_characters = {
+        ' ': '%20',
+        '!': '%21',
+        '"': '%22',
+        '#': '%23',
+        '$': '%24',
+        '%': '%25',
+        '&': '%26',
+        '\'': '%27',
+        '(': '%28',
+        ')': '%29',
+        '*': '2A',
+        '+': '2B',
+        ',': '2C',
+        '-': '2D',
+        '.': '2E',
+        '/': '2F',
+        ':': '%3A',
+        ';': '%3B',
+        '<': '%3C',
+        '=': '%3D',
+        '>': '%3E',
+        '?': '%3F',
+        '[': '%5B',
+        '\\': '%5C',
+        ']': '%5D',
+        '^': '%5E',
+        '_': '%5F',
+        '`': '%60',
+        '{': '%7B',
+        '|': '%7C',
+        '}': '%7D',
+        '~': '%7E',
+        '€': '%E2%82%AC',
+    }
+    return EmailMessage(
+                f'Nowa wiadomość na wielomiod.pl napisana przez {target}',
+                f'Dzień dobry {target_name},\n\n\n' + msg.translate(special_characters),
+                to=['jozek@wielomiod.pl'],
+            )
