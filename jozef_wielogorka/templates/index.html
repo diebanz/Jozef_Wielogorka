@@ -1,321 +1,275 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Kaushan+Script&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-            crossorigin="anonymous"
-        />
-        {% load static %}
-        <link rel="stylesheet" href="{% static '/css/normaliser.css' %}" />
-        <link rel="stylesheet" href="{% static '/css/style.css' %}" />
-        <title>Józef Wielogórka | Polski Miód</title>
-    </head>
-    <body>
-        <header id="header" class="header">
-            <nav class="navi">
-                <ul class="navi__list">
-                    <li class="navi__list--item">
-                        <a href="#" class="navi__list--link"
-                            ><h4 class="heading heading__4 logo">JW</h4></a
-                        >
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Kaushan+Script&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/normaliser.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <title>Józef Wielogórka | Polski Miód</title>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <nav class="navi">
+            <ul class="navi__list">
+                <li class="navi__list--item">
+                    <a href="#" class="navi__list--link">
+                        <h4 class="heading heading__4 logo">JW</h4>
+                    </a>
+                </li>
+            </ul>
+            <div class="navi__menu">
+                <input type="checkbox" class="navi__checkbox" id="navi-toggle" />
+                <label for="navi-toggle" class="navigation__button">
+                    <span class="navi__icon"><i class="fas fa-caret-square-down"></i></span>
+                </label>
+                <div class="navi__menu--dropdown">
+                    <ul class="navi__menu--list">
+                        <li class="navi__menu--item">
+                            <a href="#" class="navi__menu--link">HOME</a>
+                        </li>
+                        <li class="navi__menu--item">
+                            <a href="#about" class="navi__menu--link">O mnie</a>
+                        </li>
+                        <li class="navi__menu--item">
+                            <a href="#offer" class="navi__menu--link">Oferta</a>
+                        </li>
+                        <li class="navi__menu--item">
+                            <a href="#contact" class="navi__menu--link">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header__hero">
+            <div class="header__hero--decoration">
+                <div class="header__hero--colorbar"></div>
+                <div class="header__hero--under"></div>
+                <div class="header__hero--picture"></div>
+            </div>
+            <div class="header__hero--none">
+                <h3 class="heading heading__3 header__hero--h3">
+                    Zdrowie - Natura -
+                    <span class="header__span--1">Miód</span>
+                </h3>
+                <h1 class="heading heading__1 header__hero--h1">
+                    Smakuj naturę <br />
+                    <span class="header__span"> w najczystszej </span>
+                    <br />
+                    postaci !
+                </h1>
+                <div class="header__hero--buttons">
+                    <a href="#contact" class="btn btn__orange">Zamów juz dzis!</a>
+                    <a href="#offer" class="btn btn__transparent">Sprawdz oferte!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="blog">
+            <div class="blog__container">
+                {% load markdownify %}
+                <h2 class="blog__title">{{ news.title }}</h2>
+                <small>{{ news.date }} Jozef Wielogórka</small>
+                <p class="blog__text">{{ news.body|markdownify }}</p>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about__left">
+                <h2 class="heading heading__2 about__left--heading">
+                    Józef Wielogórka
+                </h2>
+                <div class="orange__line about__left--line"></div>
+                <div class="about__left--text">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Provident expedita hic itaque molestias nam
+                        nihil iusto soluta, eum laborum perferendis, nobis
+                        voluptates qui asperiores nemo corporis cupiditate
+                        praesentium quam incidunt.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Eum quae nemo eligendi expedita quasi iste
+                        cumque id nisi eius perferendis vero possimus
+                        aperiam ad quos optio odio, ratione enim
+                        repellendus, nihil facilis ipsum debitis veritatis
+                        asperiores? Neque atque repellat saepe?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Eum quae nemo eligendi expedita quasi iste
+                        cumque id nisi eius perferendis vero possimus
+                        aperiam ad quos optio odio, ratione enim
+                        repellendus, nihil facilis ipsum debitis veritatis
+                        asperiores? Neque atque repellat saepe?
+                    </p>
+                </div>
+                <a href="#contact" class="btn btn__transparent about__left--button">Skontaktujmy się!</a>
+            </div>
+            <div class="about__right">
+                <div class="about__right--decoration"></div>
+                <div class="about__right--picture"></div>
+            </div>
+        </section>
+        <!-- Section About ends -->
+
+        <section class="offer" id="offer">
+            <h2 class="heading heading__2 offer__heading">Nasza Oferta</h2>
+            <div class="orange__line offer__line"></div>
+            <div class="offer__container">
+                <div class="card">
+                    <div class="card__side card__side--front">
+                        <h3 class="heading heading__3 offer__heading--3">
+                            Miód wielokwiatowy
+                        </h3>
+                    </div>
+                    <div class="card__side card__side--behind"></div>
+                </div>
+                <div class="card">
+                    <div class="
+                                card__side card__side--front card__side--front-1
+                            ">
+                        <h3 class="heading heading__3 offer__heading--3">
+                            Miód rzepakowy
+                        </h3>
+                    </div>
+                    <div class="card__side card__side--behind"></div>
+                </div>
+                <div class="card">
+                    <div class="card__side card__side--front">
+                        <h3 class="heading heading__3 offer__heading--3">
+                            Miód akacjowy
+                        </h3>
+                    </div>
+                    <div class="card__side card__side--behind"></div>
+                </div>
+                <div class="card">
+                    <div class="
+                                card__side card__side--front card__side--front-1
+                            ">
+                        <h3 class="heading heading__3 offer__heading--3">
+                            Miód lipowy
+                        </h3>
+                    </div>
+                    <div class="card__side card__side--behind"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Section offer ends -->
+
+        <section class="contact" id="contact">
+            <div class="contact__hero">
+                <div class="contact__hero--decoration">
+                    <div class="contact__hero--colorbar"></div>
+                    <div class="contact__hero--under"></div>
+                    <div class="contact__hero--picture"></div>
+                </div>
+                <div class="contact__hero--box">
+                    <h2 class="heading heading__2 contact__heading">
+                        Skontaktujmy się
+                    </h2>
+                    <div class="orange__line contact__line"></div>
+                    <form action="/#" method="POST" class="contact__form" id="form">
+                        {% csrf_token %} {{ form.non_field_errors }}
+                        <div class="contact__form--name">
+                            <label for="name">Imię i nazwisko:</label>
+                            {{ form.name.errors }} {{ form.name }}
+                        </div>
+                        <div class="contact__form--email">
+                            <label for="email">Twój email:</label>
+                            {{ form.email.errors }} {{ form.email }}
+                        </div>
+                        <div class="contact__form--message">
+                            <label for="message">Wiadomość: </label>
+                            {{ form.message.errors }} {{ form.message }}
+                        </div>
+                        <div class="contact__form--buttons">
+                            <button type="submit" class="btn btn__orange">
+                                Wyślij Wiadomość
+                            </button>
+                            <span class="contact__span">lub</span>
+                            <div class="btn btn__green btn__div">
+                                <a href="tel:722-398-508"> zadzwoń</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End of section contact -->
+    </main>
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+            <div id="map" class="footer__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2334.347378764136!2d18.770175370300944!3d51.9479942155278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471b037259e4c5c7%3A0xb2f781f055f17407!2sSpycimierz%2069%2C%2099-210%20Spycimierz%2C%20Poland!5e1!3m2!1sen!2sde!4v1639081202692!5m2!1sen!2sde"
+                    width="500" height="375" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="footer__info">
+                <h3 class="heading heading__3 footer__info--h3">
+                    Józef <br />
+                    Wielogórka
+                </h3>
+                <h4 class="heading heading__4 footer__info--h4">
+                    Spycimierz 69 <br />
+                    90-210 Uniejów
+                </h4>
+                <ul>
+                    <li class="footer__info--item">
+                        <a href="" class="footer__info--link"><i class="fas fa-envelope"></i>
+                            jozek@wielomiod.pl</a>
+                    </li>
+                    <li class="footer__info--item">
+                        <a href="" class="footer__info--link"><i class="fas fa-phone-square-alt"></i> +48 722
+                            398 508</a>
                     </li>
                 </ul>
-                <div class="navi__menu">
-                    <input
-                        type="checkbox"
-                        class="navi__checkbox"
-                        id="navi-toggle"
-                    />
-                    <label for="navi-toggle" class="navigation__button">
-                        <span class="navi__icon"
-                            ><i class="fas fa-caret-square-down"></i
-                        ></span>
-                    </label>
-                    <div class="navi__menu--dropdown">
-                        <ul class="navi__menu--list">
-                            <li class="navi__menu--item">
-                                <a href="#" class="navi__menu--link">HOME</a>
-                            </li>
-                            <li class="navi__menu--item">
-                                <a href="#about" class="navi__menu--link"
-                                    >O mnie</a
-                                >
-                            </li>
-                            <li class="navi__menu--item">
-                                <a href="#offer" class="navi__menu--link"
-                                    >Oferta</a
-                                >
-                            </li>
-                            <li class="navi__menu--item">
-                                <a href="#contact" class="navi__menu--link"
-                                    >Kontakt</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="header__hero">
-                <div class="header__hero--decoration">
-                    <div class="header__hero--colorbar"></div>
-                    <div class="header__hero--under"></div>
-                    <div class="header__hero--picture"></div>
-                </div>
-                <div class="header__hero--none">
-                    <h3 class="heading heading__3 header__hero--h3">
-                        Zdrowie - Natura -
-                        <span class="header__span--1">Miód</span>
-                    </h3>
-                    <h1 class="heading heading__1 header__hero--h1">
-                        Smakuj naturę <br />
-                        <span class="header__span"> w najczystszej </span>
-                        <br />
-                        postaci !
-                    </h1>
-                    <div class="header__hero--buttons">
-                        <a href="#contact" class="btn btn__orange"
-                            >Zamów juz dzis!</a
-                        >
-                        <a href="#offer" class="btn btn__transparent"
-                            >Sprawdz oferte!</a
-                        >
-                    </div>
-                </div>
             </div>
-        </header>
-        <main>
-            <section class="blog">
-                <div class="blog__container">
-                    {% load markdownify %}
-                    <h2 class="blog__title">{{ news.title }}</h2>
-                    <small>{{ news.date }} Jozef Wielogórka</small>
-                    <p class="blog__text">{{ news.body|markdownify }}</p>
-                </div>
-            </section>
-            <section class="about" id="about">
-                <div class="about__left">
-                    <h2 class="heading heading__2 about__left--heading">
-                        Józef Wielogórka
-                    </h2>
-                    <div class="orange__line about__left--line"></div>
-                    <div class="about__left--text">
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Provident expedita hic itaque molestias nam
-                            nihil iusto soluta, eum laborum perferendis, nobis
-                            voluptates qui asperiores nemo corporis cupiditate
-                            praesentium quam incidunt.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Eum quae nemo eligendi expedita quasi iste
-                            cumque id nisi eius perferendis vero possimus
-                            aperiam ad quos optio odio, ratione enim
-                            repellendus, nihil facilis ipsum debitis veritatis
-                            asperiores? Neque atque repellat saepe?
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Eum quae nemo eligendi expedita quasi iste
-                            cumque id nisi eius perferendis vero possimus
-                            aperiam ad quos optio odio, ratione enim
-                            repellendus, nihil facilis ipsum debitis veritatis
-                            asperiores? Neque atque repellat saepe?
-                        </p>
-                    </div>
-                    <a
-                        href="#contact"
-                        class="btn btn__transparent about__left--button"
-                        >Skontaktujmy się!</a
-                    >
-                </div>
-                <div class="about__right">
-                    <div class="about__right--decoration"></div>
-                    <div class="about__right--picture"></div>
-                </div>
-            </section>
-            <!-- Section About ends -->
+            <div class="green__line footer__line"></div>
+            <div class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__list--item">
+                        <a href="#" class="footer__list--link">
+                            <h4 class="heading heading__4">home</h4>
+                        </a>
+                    </li>
+                    <li class="footer__list--item">
+                        <a href="#about" class="footer__list--link">
+                            <h4 class="heading heading__4">O mnie</h4>
+                        </a>
+                    </li>
+                    <li class="footer__list--item">
+                        <a href="#offer" class="footer__list--link">
+                            <h4 class="heading heading__4">Oferta</h4>
+                        </a>
+                    </li>
+                    <li class="footer__list--item">
+                        <a href="#contact" class="footer__list--link">
+                            <h4 class="heading heading__4">Kontakt</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__credits">
+            <h4 class="heading heading__4 footer__credits--text">
+                &copy; Jozef Wielogorka
+            </h4>
+            <h4 class="heading heading__4 footer__credits--text">
+                created by
+                <a href="http://banz-devs.tech" target="_blank" rel="noopener">BanzDevs Team</a>
+                | 2021
+            </h4>
+        </div>
+    </footer>
+</body>
 
-            <section class="offer" id="offer">
-                <h2 class="heading heading__2 offer__heading">Nasza Oferta</h2>
-                <div class="orange__line offer__line"></div>
-                <div class="offer__container">
-                    <div class="card">
-                        <div class="card__side card__side--front">
-                            <h3 class="heading heading__3 offer__heading--3">
-                                Miód wielokwiatowy
-                            </h3>
-                        </div>
-                        <div class="card__side card__side--behind"></div>
-                    </div>
-                    <div class="card">
-                        <div
-                            class="
-                                card__side card__side--front card__side--front-1
-                            "
-                        >
-                            <h3 class="heading heading__3 offer__heading--3">
-                                Miód rzepakowy
-                            </h3>
-                        </div>
-                        <div class="card__side card__side--behind"></div>
-                    </div>
-                    <div class="card">
-                        <div class="card__side card__side--front">
-                            <h3 class="heading heading__3 offer__heading--3">
-                                Miód akacjowy
-                            </h3>
-                        </div>
-                        <div class="card__side card__side--behind"></div>
-                    </div>
-                    <div class="card">
-                        <div
-                            class="
-                                card__side card__side--front card__side--front-1
-                            "
-                        >
-                            <h3 class="heading heading__3 offer__heading--3">
-                                Miód lipowy
-                            </h3>
-                        </div>
-                        <div class="card__side card__side--behind"></div>
-                    </div>
-                </div>
-            </section>
-            <!-- Section offer ends -->
-
-            <section class="contact" id="contact">
-                <div class="contact__hero">
-                    <div class="contact__hero--decoration">
-                        <div class="contact__hero--colorbar"></div>
-                        <div class="contact__hero--under"></div>
-                        <div class="contact__hero--picture"></div>
-                    </div>
-                    <div class="contact__hero--box">
-                        <h2 class="heading heading__2 contact__heading">
-                            Skontaktujmy się
-                        </h2>
-                        <div class="orange__line contact__line"></div>
-                        <form
-                            action="/#"
-                            method="POST"
-                            class="contact__form"
-                            id="form"
-                        >
-                            {% csrf_token %} {{ form.non_field_errors }}
-                            <div class="contact__form--name">
-                                <label for="name">Imię i nazwisko:</label>
-                                {{ form.name.errors }} {{ form.name }}
-                            </div>
-                            <div class="contact__form--email">
-                                <label for="email">Twój email:</label>
-                                {{ form.email.errors }} {{ form.email }}
-                            </div>
-                            <div class="contact__form--message">
-                                <label for="message">Wiadomość: </label>
-                                {{ form.message.errors }} {{ form.message }}
-                            </div>
-                            <div class="contact__form--buttons">
-                                <button type="submit" class="btn btn__orange">
-                                    Wyślij Wiadomość
-                                </button>
-                                <span class="contact__span">lub</span>
-                                <div class="btn btn__green btn__div">
-                                    <a href="tel:722-398-508"> zadzwoń</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!-- End of section contact -->
-        </main>
-        <footer class="footer" id="footer">
-            <div class="footer__container">
-                <div id="map" class="footer__map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.402354541655!2d13.19926991580748!3d52.521073179814415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a857b31c439471%3A0x488bc11a3b0411e1!2sBetckestra%C3%9Fe%2C%2013595%20Berlin!5e1!3m2!1sen!2sde!4v1637301202420!5m2!1sen!2sde"
-                        width="500"
-                        height="375"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                    ></iframe>
-                </div>
-                <div class="footer__info">
-                    <h3 class="heading heading__3 footer__info--h3">
-                        Józef <br />
-                        Wielogórka
-                    </h3>
-                    <h4 class="heading heading__4 footer__info--h4">
-                        Spycimierz 69 <br />
-                        90-210 Uniejów
-                    </h4>
-                    <ul>
-                        <li class="footer__info--item">
-                            <a href="" class="footer__info--link"
-                                ><i class="fas fa-envelope"></i>
-                                jozek@wielomiod.pl</a
-                            >
-                        </li>
-                        <li class="footer__info--item">
-                            <a href="" class="footer__info--link"
-                                ><i class="fas fa-phone-square-alt"></i> +48 722
-                                398 508</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-                <div class="green__line footer__line"></div>
-                <div class="footer__nav">
-                    <ul class="footer__list">
-                        <li class="footer__list--item">
-                            <a href="#" class="footer__list--link">
-                                <h4 class="heading heading__4">home</h4>
-                            </a>
-                        </li>
-                        <li class="footer__list--item">
-                            <a href="#about" class="footer__list--link">
-                                <h4 class="heading heading__4">O mnie</h4>
-                            </a>
-                        </li>
-                        <li class="footer__list--item">
-                            <a href="#offer" class="footer__list--link">
-                                <h4 class="heading heading__4">Oferta</h4>
-                            </a>
-                        </li>
-                        <li class="footer__list--item">
-                            <a href="#contact" class="footer__list--link">
-                                <h4 class="heading heading__4">Kontakt</h4>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__credits">
-                <h4 class="heading heading__4 footer__credits--text">
-                    &copy; Jozef Wielogorka
-                </h4>
-                <h4 class="heading heading__4 footer__credits--text">
-                    created by
-                    <a
-                        href="http://banz-devs.tech"
-                        target="_blank"
-                        rel="noopener"
-                        >BanzDevs Team</a
-                    >
-                    | 2021
-                </h4>
-            </div>
-        </footer>
-    </body>
 </html>
