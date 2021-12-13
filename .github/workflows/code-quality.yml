@@ -23,6 +23,6 @@ jobs:
     - name: Run Pylint
       run: pylint --disable=all --enable=unused-import $(git ls-files '*.py')
     - name: Install Chromium
-      run: apt-get install -y chromium-browser
+      run: sudo apt-get install -y chromium-browser
     - name: Run Selenium Tests
       run: python jozef_wielogorka/manage.py test
