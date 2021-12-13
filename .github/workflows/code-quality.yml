@@ -25,4 +25,6 @@ jobs:
     - name: Install Chromium
       run: sudo apt-get install -y chromium-browser
     - name: Run Selenium Tests
-      run: python jozef_wielogorka/manage.py test
+      run: |
+        cd jozef_wielogorka
+        python manage.py test
