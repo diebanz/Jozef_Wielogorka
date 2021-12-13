@@ -26,6 +26,3 @@ jobs:
       run: sudo apt-get install -y chromium-browser
     - name: Run Selenium Tests
       run: python jozef_wielogorka/manage.py test
-      env:
-        # Random Key
-        SECRET_KEY: '-73#f6q@hb)1vtqogb&b!=0q887n^$+*^*v=p9y1j+2*2pgsz1'

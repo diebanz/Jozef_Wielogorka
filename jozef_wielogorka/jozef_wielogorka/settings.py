@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 try:
     SECRET_KEY
 except NameError:
-    SECRET_KEY = ""
+    SECRET_KEY = "-73#f6q@hb)1vtqogb&b!=0q887n^$+*^*v=p9y1j+2*2pgsz1"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 try:
