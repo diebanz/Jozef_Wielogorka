@@ -3,20 +3,24 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Checks
+
+    name: Setup Python
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
-        python-version: 3.x
+        python-version: 3.9
+    name: Install dependencies
     - run: pip install --upgrade pip
-    - run: pip install black==21.12b0 pylint==v3.0.0a4
+    - run: pip install -r requirements.txt
+    name: Run Black
     - run: black --diff --check $(git ls-files '*.py')
+    name: Run Pylint
     - run: pylint --disable=all --enable=unused-import $(git ls-files '*.py')
+    name: Perform selenium tests
+    - run: apt-get install -y chromium-browser
+    - run: python jozef_wielogorka/manage.py test

@@ -4,6 +4,9 @@ from datetime import datetime
 
 # Create your models here.
 class News(models.Model):
+    class Meta:
+        verbose_name_plural = "news"
+
     title = models.CharField(max_length=150)
     body = models.TextField()
     date = models.DateField(auto_now_add=True)
